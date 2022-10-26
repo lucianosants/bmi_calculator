@@ -6,23 +6,25 @@ export const Container = styled('main', {
 	padding: '1.8rem',
 });
 
-export const Title = styled('h2', {
-	color: '$brand',
-	fontSize: '3.2rem',
-	fontFamily: '$title',
-	letterSpacing: '0.1rem',
-});
-
-export const Subtitle = styled('h4', {
-	color: '$text',
-	fontSize: '2.4rem',
-	fontFamily: '$title, sans-serif',
-	letterSpacing: '0.1rem',
-});
-
-export const Text = styled('p', {
+export const Text = styled('h4', {
 	color: '$text',
 	fontSize: '1.8rem',
-	fontFamily: '$bodyText, serif',
+	fontFamily: '$bodyText',
 	letterSpacing: '0.1rem',
+
+	variants: {
+		typography: {
+			title: {
+				fontFamily: '$title',
+
+				fontSize: '3.2rem',
+				color: '$brand',
+			},
+			subtitle: {
+				fontFamily: '$title',
+
+				fontSize: '2.4rem',
+			},
+		},
+	},
 });
