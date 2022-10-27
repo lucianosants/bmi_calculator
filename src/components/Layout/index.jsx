@@ -6,19 +6,24 @@ export default function Layout() {
 	const [weight, setWeight] = useState(0);
 	const [height, setHeight] = useState(0);
 	const [bmi, setBmi] = useState(0);
+	const [error, setError] = useState('');
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
 		if (weight <= 0 || !weight) {
-			return console.log('Peso inválido!');
+			return setError('peso invalido');
 		}
 
 		if (height <= 0 || !height) {
-			return console.log('Altura inválida!');
+			return setError('Altura invalido');
 		}
 
-		setBmi(weight / (height * height));
+		const weightFloat = parseFloat(weight);
+		const heightFloat = parseFloat(height);
+
+		setBmi(weightFloat / (heightFloat * heightFloat));
+		setError('');
 	};
 
 	return (

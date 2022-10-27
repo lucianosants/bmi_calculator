@@ -24,7 +24,7 @@ export default function Form({
 				<span>Altura:</span>
 				<input
 					required
-					type='text'
+					type='number'
 					value={height || ''}
 					onChange={setHeight}
 					placeholder='Qual é a sua altura?'
