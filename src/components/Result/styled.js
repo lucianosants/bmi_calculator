@@ -1,7 +1,10 @@
 import { styled } from '@/styles/stitches.config';
 
+export const TableContainer = styled('div', {});
+
 export const ResultContainer = styled('section', {
 	padding: '1.8rem',
+	maxWidth: '60%',
 });
 
 export const Table = styled('table', {

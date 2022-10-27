@@ -6,6 +6,7 @@ export const Container = styled('main', {
 	padding: '1.8rem',
 	display: 'flex',
 	flexWrap: 'wrap',
+	alignItems: 'center',
 });
 
 export const Text = styled('h4', {
@@ -13,6 +14,7 @@ export const Text = styled('h4', {
 	fontSize: '1.8rem',
 	fontFamily: '$bodyText',
 	letterSpacing: '0.1rem',
+	margin: '1.8rem 0',
 
 	variants: {
 		typography: {

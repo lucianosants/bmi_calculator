@@ -3,6 +3,7 @@ import {
 	ResultContainer,
 	Table,
 	TableBody,
+	TableContainer,
 	TableData,
 	TableHead,
 } from './styled';
@@ -32,7 +33,8 @@ export default function Result() {
 				Veja abaixo a tabela com os respectivos resultados. Confira
 				também o seu resultado.
 			</Text>
-			<div>
+
+			<TableContainer>
 				<Table>
 					<TableHead>
 						<tr>
@@ -56,7 +58,7 @@ export default function Result() {
 						)}
 					</TableBody>
 				</Table>
-			</div>
+			</TableContainer>
 		</ResultContainer>
 	);
 }

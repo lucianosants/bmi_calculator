@@ -6,7 +6,8 @@ export const FormContainer = styled('form', {
 	padding: '1.8rem',
 	display: 'flex',
 	flexDirection: 'column',
-	width: '100%',
+	width: '30%',
+	height: 'auto',
 	margin: '0 auto',
 });
 

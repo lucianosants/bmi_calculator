@@ -15,7 +15,7 @@ export default function Layout() {
 		e.preventDefault();
 
 		if (weight <= 0 || !weight) {
-			return setError('peso invalido');
+			return setError('Peso invalido');
 		}
 
 		if (height <= 0 || !height) {
