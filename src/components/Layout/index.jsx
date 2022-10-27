@@ -1,6 +1,9 @@
-import { Container } from './styles';
-import Form from '@/components/Form';
 import { useState } from 'react';
+
+import { Container } from './styles';
+
+import Form from '@/components/Form';
+import Result from '@/components/Result';
 
 export default function Layout() {
 	const [weight, setWeight] = useState(0);
@@ -16,7 +19,7 @@ export default function Layout() {
 		}
 
 		if (height <= 0 || !height) {
-			return setError('Altura invalido');
+			return setError('Altura invalida');
 		}
 
 		const weightFloat = parseFloat(weight);
@@ -35,6 +38,7 @@ export default function Layout() {
 				setWeight={(e) => setWeight(e.target.value)}
 				setHeight={(e) => setHeight(e.target.value)}
 			/>
+			<Result />
 		</Container>
 	);
 }

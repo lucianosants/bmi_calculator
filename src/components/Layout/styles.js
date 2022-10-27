@@ -4,6 +4,8 @@ export const Container = styled('main', {
 	maxWidth: '120rem',
 	margin: '0 auto',
 	padding: '1.8rem',
+	display: 'flex',
+	flexWrap: 'wrap',
 });
 
 export const Text = styled('h4', {
