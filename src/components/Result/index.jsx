@@ -1,4 +1,5 @@
 import { Text } from '@/components/Layout/styles';
+
 import {
 	ResultContainer,
 	Table,
@@ -6,31 +7,32 @@ import {
 	TableContainer,
 	TableData,
 	TableHead,
-} from './styled';
+	ResultDisplay,
+} from './styles';
 
-export default function Result() {
-	const table_imc = [
-		{ id: '1', title: 'Abaixo do peso', imc: 'Menor que 18,5' },
-		{ id: '2', title: 'Peso normal', imc: 'Entre 18,5 a 24,9' },
-		{
-			id: '3',
-			title: 'Excesso de peso',
-			imc: 'Entre 25,0 a 29,9',
-		},
-		{ id: '4', title: 'Obesidade 1', imc: 'Entre 30,0 a 34,9' },
-		{ id: '5', title: 'Obesidade 2', imc: 'Entre 35,0 a 39,9' },
-		{
-			id: '6',
-			title: 'Obesidade mórbida',
-			imc: 'Igual ou maior que 40.0',
-		},
-	];
+export const table_imc = [
+	{ id: 1, title: 'Abaixo do peso', imc: 'Menor que 18,5' },
+	{ id: 2, title: 'Peso normal', imc: 'Entre 18,5 a 24,9' },
+	{
+		id: 3,
+		title: 'Excesso de peso',
+		imc: 'Entre 25,0 a 29,9',
+	},
+	{ id: 4, title: 'Obesidade 1', imc: 'Entre 30,0 a 34,9' },
+	{ id: 5, title: 'Obesidade 2', imc: 'Entre 35,0 a 39,9' },
+	{
+		id: 6,
+		title: 'Obesidade mórbida',
+		imc: 'Igual ou maior que 40.0',
+	},
+];
 
+export default function Result({ result, error, type, message }) {
 	return (
 		<ResultContainer>
 			<Text typography={'title'}>Calcule seu IMC</Text>
 			<Text>
-				Veja abaixo a tabela com os respectivos resultados. Confira
+				Veja abaixo a tabela com informações de cada classe. Confira
 				também o seu resultado.
 			</Text>
 
@@ -59,6 +61,15 @@ export default function Result() {
 					</TableBody>
 				</Table>
 			</TableContainer>
+
+			<ResultDisplay state={type}>
+				<Text typography={'subtitle'}>
+					O seu IMC é <strong>{result}</strong> pontos.{' '}
+				</Text>
+
+				<Text typography={type}>{message}</Text>
+				<Text>{error}</Text>
+			</ResultDisplay>
 		</ResultContainer>
 	);
 }

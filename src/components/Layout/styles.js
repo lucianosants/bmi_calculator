@@ -29,6 +29,12 @@ export const Text = styled('h4', {
 
 				fontSize: '2.4rem',
 			},
+			error: {
+				color: '$errorText',
+			},
+			success: {
+				color: '$successText',
+			},
 		},
 	},
 });

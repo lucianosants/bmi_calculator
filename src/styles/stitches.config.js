@@ -9,6 +9,10 @@ export const { styled, globalCss, getCssText } = createStitches({
 			theadBg: '#ff91a1',
 			rowA: '#f7d0de',
 			rowB: '#ffdce8',
+			successBg: '#b6ffb6',
+			successText: '#006500',
+			errorBg: '#fba0a0',
+			errorText: '#650000',
 		},
 		fonts: {
 			title: 'Oswald',

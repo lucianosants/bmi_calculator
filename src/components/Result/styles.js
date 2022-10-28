@@ -14,7 +14,7 @@ export const Table = styled('table', {
 export const TableHead = styled('thead', {
 	background: '$theadBg',
 	fontFamily: '$title',
-	lineHeight: '0.1rem',
+	letterSpacing: '0.1rem',
 	fontSize: '1.8rem',
 
 	th: {
@@ -41,5 +41,19 @@ export const TableData = styled('tr', {
 
 	td: {
 		padding: '1.3rem',
+	},
+});
+
+export const ResultDisplay = styled('div', {
+	textAlign: 'center',
+	background: '$errorBg',
+	padding: '1.3rem 0',
+
+	variants: {
+		state: {
+			success: {
+				background: '$successBg',
+			},
+		},
 	},
 });
