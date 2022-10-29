@@ -9,6 +9,11 @@ export const FormContainer = styled('form', {
 	width: '30%',
 	height: 'auto',
 	margin: '0 auto',
+
+	'@mobile': {
+		width: '100%',
+		order: 1,
+	},
 });
 
 export const LabelContainer = styled('label', {

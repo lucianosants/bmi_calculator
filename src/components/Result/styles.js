@@ -1,11 +1,16 @@
 import { styled } from '@/styles/stitches.config';
 
-export const TableContainer = styled('div', {});
-
 export const ResultContainer = styled('section', {
 	padding: '1.8rem',
 	maxWidth: '60%',
+
+	'@mobile': {
+		maxWidth: '100%',
+		padding: '1.8rem 0',
+	},
 });
+
+export const TableContainer = styled('div', {});
 
 export const Table = styled('table', {
 	width: '100%',
@@ -47,7 +52,7 @@ export const TableData = styled('tr', {
 export const ResultDisplay = styled('div', {
 	textAlign: 'center',
 	background: '$errorBg',
-	padding: '1.3rem 0',
+	padding: '1.3rem 0.5rem',
 
 	variants: {
 		state: {

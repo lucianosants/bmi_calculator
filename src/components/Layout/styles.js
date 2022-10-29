@@ -7,9 +7,12 @@ export const Container = styled('main', {
 	display: 'flex',
 	flexWrap: 'wrap',
 	alignItems: 'center',
+	'@mobile': {
+		flexDirection: 'column',
+	},
 });
 
-export const Text = styled('h4', {
+export const Text = styled('p', {
 	color: '$text',
 	fontSize: '1.8rem',
 	fontFamily: '$bodyText',
@@ -20,20 +23,22 @@ export const Text = styled('h4', {
 		typography: {
 			title: {
 				fontFamily: '$title',
-
+				fontWeight: '600',
 				fontSize: '3.2rem',
 				color: '$brand',
 			},
 			subtitle: {
 				fontFamily: '$title',
-
+				fontWeight: '600',
 				fontSize: '2.4rem',
 			},
 			error: {
 				color: '$errorText',
+				fontWeight: '600',
 			},
 			success: {
 				color: '$successText',
+				fontWeight: '600',
 			},
 		},
 	},

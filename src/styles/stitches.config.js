@@ -19,4 +19,7 @@ export const { styled, globalCss, getCssText } = createStitches({
 			bodyText: 'Source Serif Pro',
 		},
 	},
+	media: {
+		mobile: '(max-width: 720px)',
+	},
 });
