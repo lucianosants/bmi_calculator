@@ -6,6 +6,7 @@ import Form from '@/components/Form';
 import Result from '@/components/Result';
 
 import { table_imc as table } from '@/components/Result';
+import Footer from '@/components/Footer';
 
 export default function Layout() {
 	const [weight, setWeight] = useState(0);
@@ -126,6 +127,8 @@ export default function Layout() {
 					type='error'
 				/>
 			)}
+
+			<Footer />
 		</Container>
 	);
 }
